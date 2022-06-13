@@ -5,8 +5,8 @@ services:
       context: ./server
       dockerfile: Dockerfile
     volumes:
-      - /app/node_modules
-      - ./server:/app
+      - ./server:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
       - '5000:5000'
     restart: always
@@ -17,21 +17,6 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
-
-  prisma:
-    image: prismagraphql/prisma:1.27
-    restart: always
-    ports:
-      - '4466:4466'
-    environment:
-      PRISMA_CONFIG: |
-        port: 4466
-        managementApiSecret: mysecret42
-        databases:
-          default:
-            connector: mongo
-            uri: mongodb://root:example@mongo:27017/
-            database: local
 
   mongo-express:
     image: mongo-express
