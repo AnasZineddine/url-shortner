@@ -34,5 +34,11 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: anyuser
       ME_CONFIG_MONGODB_ADMINPASSWORD: anypassword
       ME_CONFIG_MONGODB_URL: mongodb://anyuser:anypassword@mongo:27017/trimm?authSource=admin
+  nginx:
+    restart: always
+    build:
+      context: ./nginx
+    ports:
+      - '80:80'
 volumes:
   mongo-db:
