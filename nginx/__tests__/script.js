@@ -2,7 +2,7 @@ import { check } from 'k6';
 import http from 'k6/http';
 
 export default function () {
-  const url = 'http://localhost:5000/';
+  const url = 'http://host.docker.internal:5100/';
   const res = http.get(url);
   check(
     res,
