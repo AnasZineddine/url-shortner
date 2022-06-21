@@ -4,7 +4,6 @@ const logger = require('morgan');
 const { connectZooKeeper } = require('./helpers/zooKeeper');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
 
 connectZooKeeper();
 
@@ -16,6 +15,5 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 module.exports = app;

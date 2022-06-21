@@ -49,7 +49,6 @@ const setRange = async (start) => {
       console.log(error.stack);
       return;
     }
-
     console.log('Data is set.');
   });
 };
@@ -60,7 +59,6 @@ const getRangeFromZNode = async () => {
       console.log(error.stack);
       return;
     }
-    console.log({ data });
     console.log('Got data: %s', data.toString('utf8'));
     range.start = parseInt(data.toString(), 10) + 1000000;
     range.current = parseInt(data.toString(), 10) + 1000000;

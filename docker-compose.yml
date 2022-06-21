@@ -38,5 +38,13 @@ services:
     restart: always
     depends_on:
       - api
+
+  redis:
+    image: bitnami/redis:latest
+    ports:
+      - '6379:6379'
+    restart: always
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
 volumes:
   mongo-db:
