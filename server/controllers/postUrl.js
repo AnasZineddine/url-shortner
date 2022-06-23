@@ -21,8 +21,8 @@ const postUrl = async (req, res) => {
     const cachedUrl = await redisClient.get(req.body.url);
     if (cachedUrl) {
       console.log('CASHED');
-      await redisClient.disconnect();
       res.json({ shortUrl: cachedUrl });
+      await redisClient.disconnect();
     } else {
       const findUrl = await prisma.link.findFirst({
         where: {
@@ -31,8 +31,8 @@ const postUrl = async (req, res) => {
       });
       if (findUrl) {
         await redisClient.set(findUrl.url, findUrl.shortUrl);
-        await redisClient.disconnect();
         res.json({ shortUrl: findUrl.shortUrl });
+        await redisClient.disconnect();
       } else {
         const shortnedUrl = await prisma.link.create({
           data: {
@@ -41,8 +41,8 @@ const postUrl = async (req, res) => {
           },
         });
         await redisClient.set(shortnedUrl.url, shortnedUrl.shortUrl);
-        await redisClient.disconnect();
         res.json({ shortUrl: shortnedUrl.shortUrl });
+        await redisClient.disconnect();
       }
     }
   } catch (error) {
