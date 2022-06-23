@@ -3,12 +3,15 @@ const path = require('path');
 const logger = require('morgan');
 const createHttpError = require('http-errors');
 const { connectZooKeeper } = require('./helpers/zooKeeper');
-
 const indexRouter = require('./routes/index');
+const rateLimiter = require('./middlewares/rateLimiter');
 
 connectZooKeeper();
 
 const app = express();
+
+// Apply the rate limiting middleware to all requests
+app.use(rateLimiter);
 
 app.use(logger('dev'));
 app.use(express.json());
