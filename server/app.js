@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const createHttpError = require('http-errors');
+const cors = require('cors');
 const { connectZooKeeper } = require('./helpers/zooKeeper');
 const indexRouter = require('./routes/index');
 const rateLimiter = require('./middlewares/rateLimiter');
@@ -9,6 +10,7 @@ const rateLimiter = require('./middlewares/rateLimiter');
 connectZooKeeper();
 
 const app = express();
+app.use(cors());
 
 // Apply the rate limiting middleware to all requests
 app.use(rateLimiter);
