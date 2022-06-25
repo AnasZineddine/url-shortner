@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Stack, Link, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import { Flex, Stack, useColorModeValue } from '@chakra-ui/react';
 import Form from './Form';
 import Title from './Title';
 

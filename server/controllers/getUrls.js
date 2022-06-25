@@ -14,6 +14,9 @@ const getUrls = async (req, res) => {
         url: true,
         shortUrl: true,
       },
+      orderBy: {
+        createdAt: 'desc',
+      },
     });
     const linksCollectionCount = await prisma.link.count();
 
