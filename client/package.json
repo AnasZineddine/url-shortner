@@ -11,6 +11,7 @@
     "@emotion/styled": "^11.9.3",
     "@hookform/resolvers": "^2.9.3",
     "framer-motion": "^6.3.14",
+    "moment": "^2.29.3",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
