@@ -9,7 +9,7 @@ const getUrl = async (req, res) => {
       },
     });
     if (result) {
-      res.redirect(result.url);
+      res.json({ url: result.url });
     } else {
       res.status(404).send('Url not found');
     }
