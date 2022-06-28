@@ -17,6 +17,7 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import { FcGlobe } from 'react-icons/fc';
+import { useRouter } from 'next/router';
 
 const Links = [
   { name: 'Shorten', link: '/' },
@@ -41,6 +42,8 @@ const NavLink = ({ children }) => (
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
+  const { pathname, asPath, query } = router;
 
   return (
     <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
@@ -66,8 +69,20 @@ export default function Navbar() {
               <Icon as={FcGlobe} w={10} h={10} />
             </MenuButton>
             <MenuList>
-              <MenuItem>English</MenuItem>
-              <MenuItem>Link 2</MenuItem>
+              <MenuItem
+                onClick={() => {
+                  router.push({ pathname, query }, asPath, { locale: 'en' });
+                }}
+              >
+                English
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  router.push({ pathname, query }, asPath, { locale: 'sv' });
+                }}
+              >
+                Link 2
+              </MenuItem>
             </MenuList>
           </Menu>
         </Flex>

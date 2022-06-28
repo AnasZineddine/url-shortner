@@ -6,7 +6,6 @@ import {
   Box,
   Text,
   VStack,
-  Button,
   Wrap,
   WrapItem,
 } from '@chakra-ui/react';
@@ -23,9 +22,9 @@ function Page() {
   const grayColor = useColorModeValue('gray.50', 'gray.800');
 
   const getKey = (pageIndex, previousPageData) => {
-    pageIndex = pageIndex + 1;
+    pageIndex += 1;
     if (previousPageData && !previousPageData.data.length) return null;
-    return `http://localhost:5100/urls?page=${pageIndex}&limit=10`;
+    return `http://localhost:5100/urls?page=${pageIndex}&limit=50`;
   };
 
   const { data: paginatedData, error, size, setSize } = useSWRInfinite(getKey, fetcher);
