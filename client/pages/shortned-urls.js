@@ -11,9 +11,10 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import Link from 'next/link';
-const moment = require('moment');
 import useSWRInfinite from 'swr/infinite';
 import InfiniteScroll from 'react-infinite-scroll-component';
+
+const moment = require('moment');
 
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
@@ -22,9 +23,10 @@ function Page() {
   const grayColor = useColorModeValue('gray.50', 'gray.800');
 
   const getKey = (pageIndex, previousPageData) => {
-    pageIndex += 1;
+    let index = pageIndex;
+    index += 1;
     if (previousPageData && !previousPageData.data.length) return null;
-    return `http://localhost:5100/urls?page=${pageIndex}&limit=50`;
+    return `http://localhost:5100/urls?page=${index}&limit=50`;
   };
 
   const { data: paginatedData, error, size, setSize } = useSWRInfinite(getKey, fetcher);
@@ -61,7 +63,7 @@ function Page() {
                       <Text color="gray.400">{moment(array.createdAt).format('llll')}</Text>
                       <Text fontWeight={600}>
                         <Link href={`http://localhost:3000/${array.shortUrl}`}>
-                          <a target="_blank"> {`http://localhost:3000/${array.shortUrl} 🚀`} </a>
+                          <a target="_blank">{`http://localhost:3000/${array.shortUrl} 🚀`}</a>
                         </Link>
                       </Text>
 

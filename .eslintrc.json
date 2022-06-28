@@ -19,5 +19,21 @@
         "react","jest"
     ],
     "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/prop-types": 0,
+        "react/jsx-props-no-spreading": "off",
+        "object-curly-newline": "off",
+        "implicit-arrow-linebreak": "off",
+        "jsx-a11y/anchor-is-valid": [
+            "off",
+            {
+              "components": ["Link"],
+              "specialLink": ["hrefLeft", "hrefRight"],
+              "aspects": ["noHref", "invalidHref", "preferButton"]
+            }
+          ],
+          "react/jsx-one-expression-per-line": "off",
+          "function-paren-newline": "off"
     }
 }

@@ -1,11 +1,11 @@
 import Redirect from '../components/Redirect';
 
-const URL = ({ hash }) => {
+function URL({ hash }) {
   return <Redirect hash={hash} />;
-};
+}
 
 export function getServerSideProps(context) {
-  const hash = context.query.hash;
+  const { hash } = context.query;
 
   return {
     props: {

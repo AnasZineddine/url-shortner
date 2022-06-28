@@ -10,7 +10,7 @@ const swedish = {
   result: 'Resultat',
   copy: 'Kopiera',
   copied: 'Kopieras',
-  madeBy: 'gjord med ❤️ av Anas Zineddine',
+  madeBy: 'Gjord med ❤️ av Anas Zineddine',
 };
 
 export default swedish;

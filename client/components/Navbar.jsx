@@ -18,6 +18,7 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import { FcGlobe } from 'react-icons/fc';
 import { useRouter } from 'next/router';
+import React from 'react';
 
 const Links = [
   { name: 'Shorten', link: '/' },
@@ -81,7 +82,7 @@ export default function Navbar() {
                   router.push({ pathname, query }, asPath, { locale: 'sv' });
                 }}
               >
-                Link 2
+                Svenska
               </MenuItem>
             </MenuList>
           </Menu>
