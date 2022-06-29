@@ -119,7 +119,7 @@ Don't hesitate to contact me to report any problem.
 			* /url route: get original link from hash :
 			  with query parameter hash="shortned link" example:
 			  http://localhost:5100/url?hash=29c4M
-		 * /urls route: get all shortned links with pagination:
+		 	* /urls route: get all shortned links with pagination:
 			example : http://localhost:5100/urls?page=1&limit=20
 
 
