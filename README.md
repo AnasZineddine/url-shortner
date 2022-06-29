@@ -116,7 +116,7 @@ Don't hesitate to contact me to report any problem.
 			* /url route: 
 			with body:  "url" : "http://www.example.com".
 		* GET: 
-			* /url route: get original link from hash :
+			* /url route:
 			  with query parameter hash="shortned link" example:
 			  http://localhost:5100/url?hash=29c4M
 		 	* /urls route: get all shortned links with pagination:
