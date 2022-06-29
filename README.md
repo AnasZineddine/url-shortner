@@ -1,14 +1,4 @@
 <div id="top"></div>
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -30,7 +20,7 @@
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
+<details open>
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -182,17 +172,4 @@ Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/AnasZineddine/url-shortner.svg?style=for-the-badge
-[contributors-url]: https://github.com/AnasZineddine/url-shortner/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/AnasZineddine/url-shortner.svg?style=for-the-badge
-[forks-url]: https://github.com/AnasZineddine/url-shortner/network/members
-[stars-shield]: https://img.shields.io/github/stars/AnasZineddine/url-shortner.svg?style=for-the-badge
-[stars-url]: https://github.com/AnasZineddine/url-shortner/stargazers
-[issues-shield]: https://img.shields.io/github/issues/AnasZineddine/url-shortner.svg?style=for-the-badge
-[issues-url]: https://github.com/AnasZineddine/url-shortner/issues
-[license-shield]: https://img.shields.io/github/license/AnasZineddine/url-shortner.svg?style=for-the-badge
-[license-url]: https://github.com/AnasZineddine/url-shortner/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
