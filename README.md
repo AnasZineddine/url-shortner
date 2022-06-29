@@ -13,7 +13,7 @@
     <br />
     <a href="https://github.com/AnasZineddine/url-shortner/issues">Report Bug</a>
     ·
-    <a href="https://github.com/AnasZineddine/url-shortner/issues">Request Feature</a>
+    <a href="https://github.com/AnasZineddine/url-shortner/pulls">Request Feature</a>
   </p>
 </div>
 
@@ -110,7 +110,17 @@ Don't hesitate to contact me to report any problem.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-...
+* API :
+	* You can access the API using the load balanced server at http://localhost:5100/
+		* POST: generate shortned link from original link
+			* /url route: 
+			with body:  "url" : "http://www.example.com".
+		* GET: 
+			* /url route: get original link from hash :
+			  with query parameter hash="shortned link" example:
+			  http://localhost:5100/url?hash=29c4M
+		 * /urls route: get all shortned links with pagination:
+			example : http://localhost:5100/urls?page=1&limit=20
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
