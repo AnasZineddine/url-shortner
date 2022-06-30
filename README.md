@@ -107,6 +107,7 @@ Don't hesitate to contact me to report any problem.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+* Client : http://localhost:3000/
 * API :
 	* You can access the API using the load balanced server at http://localhost:5100/
 		* POST:
