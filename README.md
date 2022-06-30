@@ -111,7 +111,7 @@ Don't hesitate to contact me to report any problem.
 	* You can access the API using the load balanced server at http://localhost:5100/
 		* POST:
 			* /url route: 
-			with body:  "url" : "http://www.example.com".
+			with body "url" : "http://www.example.com".
 		* GET: 
 			* /url route:
 			  with query parameter hash="shortned link" example:
@@ -165,5 +165,7 @@ The only trade-off I did is not enough unit and integration testing.
 * Add Graphql API endpoint.
 * Kubernetes.
 * DevOps.
+* Gitflow.
+* Follow the OWASP guidelines for REST Security.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
