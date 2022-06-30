@@ -11,18 +11,13 @@ const range = {
 const createZnode = async () => {
   const buffer = Buffer.from('0', 'utf8');
 
-  zooKeeperClient.create(
-    '/range',
-    buffer,
-    zookeeper.CreateMode.PERSISTENT,
-    (error, path) => {
-      if (error) {
-        console.log(error.stack);
-        return;
-      }
-      console.log('Node: %s is created.', path);
-    },
-  );
+  zooKeeperClient.create('/range', buffer, zookeeper.CreateMode.PERSISTENT, (error, path) => {
+    if (error) {
+      console.log(error.stack);
+      return;
+    }
+    console.log('Node: %s is created.', path);
+  });
 };
 
 const checkIfZnodeExists = async () => {
@@ -64,7 +59,6 @@ const getRangeFromZNode = async () => {
     range.current = parseInt(data.toString(), 10) + 1000000;
     range.end = parseInt(data.toString(), 10) + 2000000;
     setRange(range.start);
-    console.log('Range :', range);
   });
 };
 

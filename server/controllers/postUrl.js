@@ -14,13 +14,9 @@ const postUrl = async (req, res) => {
       await getRangeFromZNode();
       range.current += 1;
     }
-    console.log('current - 1', range.current - 1);
-    console.log('hash', shortUrlGenerator(range.current - 1));
-
     await redisClient.connect();
     const cachedUrl = await redisClient.get(req.body.url);
     if (cachedUrl) {
-      console.log('CASHED');
       res.json({ shortUrl: cachedUrl });
       await redisClient.disconnect();
     } else {

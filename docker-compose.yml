@@ -11,18 +11,18 @@ services:
       - '5000-5002:5000'
     restart: always
 
-  # client:
-  #   build:
-  #     context: ./client
-  #     dockerfile: Dockerfile
-  #   volumes:
-  #     - ./client:/usr/src/app
-  #     - /usr/src/app/node_modules
-  #   ports:
-  #     - '3000:3000'
-  #   depends_on:
-  #     - api
-  #   restart: always
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    volumes:
+      - ./client:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - '3000:3000'
+    depends_on:
+      - api
+    restart: always
 
   mongo:
     image: 'bitnami/mongodb:latest'
