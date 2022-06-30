@@ -94,10 +94,7 @@ After you get Docker running on your machine, to get a local copy up and running
   ```sh
   docker-compose up -d --build --scale api=3
   ```
- * OR if you want to see the logs :
-   ```sh
-  docker-compose up --build --scale api=3
-  ```
+  
 Wait for all docker services to start than go to http://localhost:3000 to access the client of the app.
 
 Don't hesitate to contact me to report any problem.
