@@ -7,7 +7,8 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb"
+        "airbnb",
+        "next"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -34,6 +35,7 @@
             }
           ],
           "react/jsx-one-expression-per-line": "off",
-          "function-paren-newline": "off"
+          "function-paren-newline": "off",
+          "react/function-component-definition": "off"
     }
 }

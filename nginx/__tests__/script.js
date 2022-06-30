@@ -12,3 +12,8 @@ export default function testLoadBalancer() {
     { my_tag: res.body },
   );
 }
+
+/* to run this test use this command:
+docker run --rm -i grafana/k6 run -u 200 -d 30s - <script.js
+NB: rate limiter should be off
+*/

@@ -14,7 +14,14 @@ function Title() {
       <Text fontSize="lg" color="gray.600">
         {translation.secondaryTitle}
         <Link href="/shortned-urls">
-          <a>{translation.links}</a>
+          <a
+            style={{
+              textDecoration: 'underline',
+              color: 'blue',
+            }}
+          >
+            {translation.links}
+          </a>
         </Link>
       </Text>
     </Stack>

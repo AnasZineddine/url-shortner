@@ -1,6 +1,6 @@
+import { useRouter } from 'next/router';
 import { Flex } from '@chakra-ui/react';
 import Navbar from './Navbar';
-import { useRouter } from 'next/router';
 
 function Layout({ children }) {
   const router = useRouter();

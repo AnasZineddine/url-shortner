@@ -40,7 +40,6 @@
     <li><a href="#technical-choices-and-architecture">Technical choices and architecture</a></li>
     <li><a href="#trade-offs">Trade-offs</a></li>
     <li><a href="#trade-offs">Skipped features</a></li>
-    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
@@ -48,8 +47,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Full-stack URL shortner MVP dockerized and ready to scale.
 
@@ -112,7 +109,7 @@ Don't hesitate to contact me to report any problem.
 
 * API :
 	* You can access the API using the load balanced server at http://localhost:5100/
-		* POST: generate shortned link from original link
+		* POST:
 			* /url route: 
 			with body:  "url" : "http://www.example.com".
 		* GET: 
@@ -141,7 +138,7 @@ Don't hesitate to contact me to report any problem.
 * Redis:
 	* Used to cache shortned and original links for performance and to decrease read/writes on the database.
 * Zookeeper:
-	* Centralized service used to manage the counter for each server, this counter is used to generate a unique hash as the short URL so we can avoid collision.
+	* Centralized service used to manage the counter for each server, this counter is used to generate a unique short hash using base 62 encoding so we can avoid collision + one random character is added at the end for obfuscation.
 * MongoDB:
 	* I used a NoSQL database as it's highly available and easy to scale and satisfies the needs of the project.
 	* I avoided using an easy hosted database on the cloud and used a local database that can be scaled to multiple replicas for demo purposes.
@@ -167,19 +164,6 @@ The only trade-off I did is not enough unit and integration testing.
 
 * Add Graphql API endpoint.
 * Kubernetes.
-* DevOps. 
+* DevOps.
 
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-[product-screenshot]: images/screenshot.png

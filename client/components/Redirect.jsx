@@ -1,13 +1,14 @@
 import useSWR from 'swr';
 import { Spinner, Flex } from '@chakra-ui/react';
 import React from 'react';
+import DefaultErrorPage from 'next/error';
 
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
 const redirectToOriginalUrl = ({ hash }) => {
   const { data, error } = useSWR(`http://localhost:5100/url?hash=${hash}`, fetcher);
 
-  if (error) return <div>failed to load</div>;
+  if (error) return <DefaultErrorPage statusCode={404} />;
   if (!data) {
     return (
       <Flex align="center" justify="center">

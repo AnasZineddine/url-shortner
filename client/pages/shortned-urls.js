@@ -63,12 +63,26 @@ function Page() {
                       <Text color="gray.400">{moment(array.createdAt).format('llll')}</Text>
                       <Text fontWeight={600}>
                         <Link href={`http://localhost:3000/${array.shortUrl}`}>
-                          <a target="_blank">{`http://localhost:3000/${array.shortUrl} 🚀`}</a>
+                          <a
+                            style={{
+                              textDecoration: 'underline',
+                              color: 'blue',
+                            }}
+                            target="_blank"
+                          >{`http://localhost:3000/${array.shortUrl} 🚀`}</a>
                         </Link>
                       </Text>
 
                       <Link href={array.url}>
-                        <a target="_blank">Original URL</a>
+                        <a
+                          style={{
+                            textDecoration: 'underline',
+                            color: 'blue',
+                          }}
+                          target="_blank"
+                        >
+                          Original URL
+                        </a>
                       </Link>
                     </VStack>
                   </Box>

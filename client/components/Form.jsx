@@ -1,7 +1,6 @@
 import {
   Stack,
   FormControl,
-  FormHelperText,
   FormLabel,
   Input,
   Box,
@@ -42,7 +41,6 @@ function Form() {
   const translation = locale === 'en' ? english : swedish;
 
   const onSubmit = async (values) => {
-    console.log({ values });
     const response = await fetch('http://localhost:5100/url', {
       method: 'POST',
       body: JSON.stringify(values),
@@ -52,7 +50,6 @@ function Form() {
     });
     const data = await response.json();
     setShortnedValue(`http://localhost:3000/${data.shortUrl}`);
-    console.log({ data });
   };
 
   return (
