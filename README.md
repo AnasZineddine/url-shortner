@@ -167,6 +167,6 @@ The only trade-off I did is not enough unit and integration testing.
 * DevOps.
 * Gitflow.
 * Follow the OWASP guidelines for REST Security.
-* Monorepo with mobile version using expo
+* Monorepo with ios/android version of the project using expo.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
